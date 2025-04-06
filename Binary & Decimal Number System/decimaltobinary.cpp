@@ -1,21 +1,29 @@
+// C++ program to convert a decimal
+// number to binary number
+
 #include <iostream>
-#include <math.h>
+#include <algorithm>
 using namespace std;
 
-int main()
-{
-    int n;
-    cin >> n;
-
-    int ans = 0;
-    int i = 0;
-
-    while (n != 0)
-    {
-        int bit = n & 1;
-        ans = bit * pow(10, i) + ans;
-        n = n >> 1;
-        i++;
+// function to convert decimal to binary
+string decToBinary(int n) {
+    string bin = "";
+    
+    while (n > 0) {
+        int bit = n%2;
+          bin.push_back('0' + bit);
+        n /= 2;
     }
-    cout << "Answer is " << ans << endl;
+  
+    reverse(bin.begin(), bin.end());
+    return bin;
 }
+
+int main() {
+    int n;
+    cout<<"Enter your decimal number:- ";
+    cin>>n;
+    cout << decToBinary(n);
+    return 0;
+}
+
