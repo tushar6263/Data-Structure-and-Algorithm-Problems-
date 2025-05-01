@@ -6,8 +6,8 @@ int main()
 
     //-------------------Print equal number of row and column *----------------------------------
     // int i=1;
-    int n;
-    cin >> n;
+    // int n;
+    // cin >> n;
     // while(i<=n){
     //     int j=1;
     //     while(j<=n){
