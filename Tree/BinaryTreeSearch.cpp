@@ -101,6 +101,22 @@ void Postorder(Node* root){
     cout<<root->data<<" ";
 }
 
+Node* minVal(Node* root){
+    Node* temp = root;
+    while(temp->left != NULL){
+        temp = temp->left;
+    }
+    return temp;
+}
+
+Node* maxVal(Node* root){
+    Node* temp = root;
+    while(temp->right != NULL){
+        temp = temp->right;
+    }
+    return temp;
+}
+
 int main(){
     Node* root = NULL;
     cout<<"Enter a data to create a Binary tree search"<<endl;
@@ -117,5 +133,8 @@ int main(){
 
     cout<<endl<<"Printing Postorder"<<endl;
     Postorder(root);
+       cout<<endl;
+    cout<<"min value is:-" <<minVal(root)->data<<endl;
+    cout<<"max value is:-" <<maxVal(root)->data<<endl;
     return 0;
 }
