@@ -90,14 +90,14 @@ Node* deleteFromBST(Node* root, int val){
 
         //1 child
         //left child
-        if(root->left != NULL && root->right ==NULL){
+        if(root->left != NULL && root->right == NULL){
             Node* temp = root->left;
             delete root;
             return temp;
         }
 
         //right child
-        if(root->left != NULL && root->right ==NULL){
+        if(root->left == NULL && root->right !=NULL){
             Node* temp = root->right;
             delete root;
             return temp;
